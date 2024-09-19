@@ -40,7 +40,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 );
 
 const imageSrc =
-  images[block.image.image_path]?.default ?? block.image.image_path;
+  images[block.image.image_path]?.default ??
+  `/site-two${block.image.image_path}`;
 
 const headingGradientColor = block.heading.heading_gradient_color;
 ---
@@ -52,7 +53,7 @@ const headingGradientColor = block.heading.heading_gradient_color;
       <div class="subheading-text" style={`color: ${block.subheading.color};`}>
         <Markdown content={block.subheading.markdown_content} />
       </div>
-      <div class="buttons">
+      <!-- <div class="buttons">
         {
           block.buttons.map((button) => {
             const name = button._bookshop_name.split("/").reverse()[0];
@@ -61,7 +62,7 @@ const headingGradientColor = block.heading.heading_gradient_color;
             return <Component {...button} />;
           })
         }
-      </div>
+      </div> -->
     </div>
     <div class="blob">
       <Image
