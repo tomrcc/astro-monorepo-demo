@@ -58,7 +58,7 @@ collections_config:
     schemas:
       default:
         name: New Page
-        path: schemas/page.md
+        path: schemas/page.mdx
         remove_extra_inputs: false
     create:
       path: "[relative_base_path]/{title|slugify}.md"
