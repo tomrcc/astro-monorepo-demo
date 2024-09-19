@@ -1,6 +1,7 @@
 # Astro CloudCannon Monorepo Demo
 
 Demonstrating how to set up a monorepo of two Astro sites in CloudCannon.
+The following build config must be added to make each site work in `site settings` / `builds` / `configuration`.
 
 ## Site One build config
 
