@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-npx @bookshop/generate
 echo "Running inside of site-one"
+npx @bookshop/generate
