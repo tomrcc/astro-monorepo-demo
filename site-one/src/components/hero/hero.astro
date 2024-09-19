@@ -16,6 +16,7 @@ interface Props {
   image: {
     image_path: string;
     alt_text: string;
+    plain_image: string;
   };
   buttons: [
     {
@@ -71,6 +72,7 @@ const headingGradientColor = block.heading.heading_gradient_color;
         sizes={`(max-width: 640px) 320px, (max-width: 960px) 500px, (max-width: 1280px) 640px`}
         src={imageSrc}
       />
+      <img src={block.image.plain_image} alt="A plain image" />
     </div>
   </div>
 
