@@ -9,5 +9,4 @@ import alpine from "@astrojs/alpinejs";
 export default defineConfig({
   site: "https://tiny-jackal.cloudvent.net/",
   integrations: [react(), tailwind(), bookshop(), alpine(), mdx()],
-  outDir: "../dist",
 });
