@@ -30,18 +30,15 @@ interface Props {
 }
 
 const block = Astro.props;
-const buttons = import.meta.glob(
-  "/site-one/src/components/buttons/**/*.astro",
-  {
-    eager: true,
-  }
-);
+const buttons = import.meta.glob("/src/components/buttons/**/*.astro", {
+  eager: true,
+});
 const buttonName = block.button?._bookshop_name.split("/").reverse()[0];
-const buttonFilePath = `/site-one/src/components/buttons/${buttonName}/${buttonName}.astro`;
+const buttonFilePath = `/src/components/buttons/${buttonName}/${buttonName}.astro`;
 const Button = (buttons[buttonFilePath] as any)?.default;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/site-one/src/assets/**/*.{jpeg,jpg,png,gif,svg}",
+  "/src/assets/**/*.{jpeg,jpg,png,gif,svg}",
   { eager: true }
 );
 

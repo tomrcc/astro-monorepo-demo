@@ -31,14 +31,11 @@ interface Props {
 }
 
 const block = Astro.props;
-const buttons = import.meta.glob(
-  "/site-one/src/components/buttons/**/*.astro",
-  {
-    eager: true,
-  }
-);
+const buttons = import.meta.glob("/src/components/buttons/**/*.astro", {
+  eager: true,
+});
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/site-one/src/assets/**/*.{jpeg,jpg,png,gif}",
+  "/src/assets/**/*.{jpeg,jpg,png,gif}",
   { eager: true }
 );
 
@@ -59,7 +56,7 @@ const headingGradientColor = block.heading.heading_gradient_color;
         {
           block.buttons.map((button) => {
             const name = button._bookshop_name.split("/").reverse()[0];
-            const filePath = `/site-one/src/components/buttons/${name}/${name}.astro`;
+            const filePath = `/src/components/buttons/${name}/${name}.astro`;
             const Component = (buttons[filePath] as any)?.default;
             return <Component {...button} />;
           })
