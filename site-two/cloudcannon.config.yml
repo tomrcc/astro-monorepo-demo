@@ -77,7 +77,7 @@ collections_config:
     schemas:
       default:
         name: New Post
-        path: schemas/post.mdx
+        path: site-two/schemas/post.mdx
     create:
       path: "[relative_base_path]/{title|slugify}.mdx"
     _inputs:
