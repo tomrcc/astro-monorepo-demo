@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 npx @bookshop/generate
-echo "Running in the root of the monorepo"
+echo "Running inside of site-one"
