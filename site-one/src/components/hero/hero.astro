@@ -40,7 +40,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 );
 
 const imageSrc =
-  images[block.image.image_path]?.default ?? block.image.image_path;
+  images[block.image.image_path]?.default ??
+  `/site-one${block.image.image_path}`;
 
 const headingGradientColor = block.heading.heading_gradient_color;
 ---
