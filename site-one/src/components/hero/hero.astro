@@ -16,7 +16,6 @@ interface Props {
   image: {
     image_path: string;
     alt_text: string;
-    plain_image: string;
   };
   buttons: [
     {
@@ -54,7 +53,7 @@ const headingGradientColor = block.heading.heading_gradient_color;
       <div class="subheading-text" style={`color: ${block.subheading.color};`}>
         <Markdown content={block.subheading.markdown_content} />
       </div>
-      <!-- <div class="buttons">
+      <div class="buttons">
         {
           block.buttons.map((button) => {
             const name = button._bookshop_name.split("/").reverse()[0];
@@ -63,7 +62,7 @@ const headingGradientColor = block.heading.heading_gradient_color;
             return <Component {...button} />;
           })
         }
-      </div> -->
+      </div>
     </div>
     <div class="blob">
       <Image
@@ -72,7 +71,6 @@ const headingGradientColor = block.heading.heading_gradient_color;
         sizes={`(max-width: 640px) 320px, (max-width: 960px) 500px, (max-width: 1280px) 640px`}
         src={imageSrc}
       />
-      <img src={block.image.plain_image} alt="A plain image" />
     </div>
   </div>
 
