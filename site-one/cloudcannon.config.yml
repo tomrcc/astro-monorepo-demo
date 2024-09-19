@@ -58,7 +58,7 @@ collections_config:
     schemas:
       default:
         name: New Page
-        path: schemas/page.mdx
+        path: schemas/page.md
         remove_extra_inputs: false
     create:
       path: "[relative_base_path]/{title|slugify}.md"
@@ -78,8 +78,6 @@ collections_config:
       default:
         name: New Post
         path: schemas/post.mdx
-    create:
-      path: "[relative_base_path]/{title|slugify}.mdx"
     _inputs:
       title:
         options:
