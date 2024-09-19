@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
 echo "Running in the root of the monorepo"
+cd site-one
 npm i
 npx @bookshop/generate
