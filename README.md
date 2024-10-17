@@ -20,11 +20,13 @@ Demonstrating how to set up a monorepo of two Astro sites in CloudCannon.
   npx @bookshop/generate
   ```
 
-  $SITE_DIR we will set up as an environment variable on each site, so that we run our postbuild script in the correct directory
+  `$SITE_DIR` we will set up as an environment variable on each site, so that we run our postbuild script in the correct directory
 
 4. Add a `cloudcannon.config.yml` in the root of the directory containing each site. Although CloudCannon expects the `cloudcannon.config.yml` in the root of the repository by default, and we’re nesting each site’s in its own directory, we’ll set the configuration path in our site settings in CloudCannon later to tell CloudCannon where to find each site’s CC config file.
 
-5. In your `cloudcannon.config.yml` add the `source:` key with the directory of your site as the value, eg. `source: site-one` . This means all your paths can be relative to the root of your site (nested in a directory) rather than to the root of your repo. NOTE: An exception to this is schema paths in your collections configuration, which are relative to the root of your *repo*, not the site, eg. 
+5. In your `cloudcannon.config.yml` add the `source:` key with the directory of your site as the value, eg. `source: site-one` . This means all your paths can be relative to the root of your site (nested in a directory) rather than to the root of your repo. 
+
+  **NOTE**: An exception to this is schema paths in your collections configuration, which are relative to the root of your *repo*, not the site, eg. 
 
   ```yaml
       schemas:
