@@ -1,0 +1,23 @@
+source: /site-one/
+collections_config:
+  src_content_blog:
+    path: src/content/blog
+    name: Src Content Blog
+    icon: account_box
+  src_content_pages:
+    path: src/content/pages
+    name: Src Content Pages
+    icon: contact_page
+  data:
+    path: data
+    name: Data
+    icon: data_usage
+    disable_url: true
+paths:
+  static: public
+  uploads: public/uploads
+timezone: Pacific/Auckland
+markdown:
+  engine: commonmark
+  options:
+    gfm: true
