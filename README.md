@@ -57,7 +57,7 @@ Demonstrating how to set up a monorepo of two Astro sites in CloudCannon.
 
 12. Repeat steps 7-11 for your other site(s), replacing site-one with the directory name each site is stored under in your repository.
 
-## Summing up
+## Taking stock
 
 The following build config should now be in place to make each site work in `Site Settings > Builds > Configuration`.
 
