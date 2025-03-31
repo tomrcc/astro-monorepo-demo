@@ -57,11 +57,9 @@ Demonstrating how to set up a monorepo of two Astro sites in CloudCannon.
 
 12. Repeat steps 7-11 for your other site(s), replacing site-one with the directory name each site is stored under in your repository.
 
-## Sites Not Using Unified Config
+## Summing up
 
-*For legacy sites not using [unified config](https://cloudcannon.com/documentation/guides/unified-configuration-migration-guide/) in CloudCannon.*
-
-The following build config must be added to make each site work in `Site Settings > Builds > Configuration`.
+The following build config should now be in place to make each site work in `Site Settings > Builds > Configuration`.
 
 ### Site One Build Config
 
@@ -99,5 +97,3 @@ In your `cloudcannon.config.yml` add the `source:` key with the directory of you
         name: New Page
         path: site-one/schemas/page.md
 ```
-
-(Assuming your schemas are nested in the root of your sites)
